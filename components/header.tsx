@@ -1,7 +1,6 @@
 import { LogoIcon } from './icons/logo.icon'
-import { NewTransactionButton } from './new-transaction-button'
 
-export function Header() {
+export function Header({ children }: React.PropsWithChildren) {
   return (
     <header>
       <div className='flex justify-between'>
@@ -9,7 +8,7 @@ export function Header() {
           <LogoIcon />
           DT Money
         </h1>
-        <NewTransactionButton />
+        {children}
       </div>
     </header>
   )
